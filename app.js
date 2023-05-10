@@ -1,14 +1,15 @@
 const app = Vue.createApp({
     data() {
         return {
+            showBooks: true,
             title: 'The final empire',
             author: 'Brandom',
             age: 45
         }
     },
     methods: {
-        changeTitle(title) {
-            this.title = title
+        toggleShowBooks() {
+            this.showBooks = !this.showBooks;
         }
     }
 })
