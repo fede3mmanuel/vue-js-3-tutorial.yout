@@ -39,9 +39,11 @@
 
         <!-- <a :href="url">{{ url }}</a> -->
 
+        <p>{{ filterBooks }}</p>
+
         <div v-if="showBooks">
             <ul>
-                <li v-for="book in books" :class="{ fav: book.isFav }" @click="toggleFav(book.id)">
+                <li v-for="book in filterBooks" :class="{ fav: book.isFav }" @click="toggleFav(book.id)">
                     <img :src="book.img" :alt="book.title" >
                     <h3>{{ book.title }}</h3>
                     <p>{{ book.author }}</p>
